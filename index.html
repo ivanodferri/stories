@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Digital Art & Justice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .story-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+        }
+
+        .story-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .interactive-element {
+            margin: 50px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .transformation-button {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .transformation-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .metamorphosis-display {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(0,0,0,0.2);
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 30px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .story-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>STORIES</h1>
+            <p>Digital art stories exploring transformation, metamorphosis when the fusion of art and justice takes place</p>
+        </div>
+
+        <div class="stories-grid">
+            <div class="story-card">
+                <h2>🎨 The Canvas of Change</h2>
+                <p>In a world where digital brushstrokes carry the weight of revolution, a young artist discovers that her creations can transform reality itself. Each pixel becomes a voice for the voiceless, each color a step toward justice.</p>
+            </div>
+
+            <div class="story-card">
+                <h2>⚖️ Code of Justice</h2>
+                <p>When algorithms start making moral decisions, a programmer must choose between efficiency and equity. Her code becomes poetry, her bugs become features, and her debugging becomes a fight for human dignity.</p>
+            </div>
+
+            <div class="story-card">
+                <h2>🦋 Metamorphosis Protocol</h2>
+                <p>A virtual reality designer creates worlds where social metamorphosis is possible. Users enter as themselves and emerge as advocates, their digital transformations rippling into real-world change.</p>
+            </div>
+
+            <div class="story-card">
+                <h2>🌊 The Tide Turner</h2>
+                <p>Through generative art, a collective of activists visualizes data about inequality. Their flowing, organic forms make statistics sing, turning numbers into narratives that move hearts and minds.</p>
+            </div>
+        </div>
+
+        <div class="interactive-element">
+            <h2>✨ Transformation Generator</h2>
+            <p>Click to experience a digital metamorphosis:</p>
+            
+            <button class="transformation-button" onclick="transform('art')">Art Transform</button>
+            <button class="transformation-button" onclick="transform('justice')">Justice Mode</button>
+            <button class="transformation-button" onclick="transform('fusion')">Fusion State</button>
+            
+            <div class="metamorphosis-display" id="display">
+                Ready for transformation...
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Where digital art meets social justice, transformation becomes inevitable.</p>
+            <p>© 2025 Stories - A Digital Art & Justice Project</p>
+        </div>
+    </div>
+
+    <script>
+        function transform(type) {
+            const display = document.getElementById('display');
+            const transformations = {
+                'art': {
+                    text: '🎨 Pixels become paintbrushes, screens become canvases, and every click creates ripples of change across the digital landscape.',
+                    color: 'linear-gradient(45deg, #ff6b6b, #feca57)'
+                },
+                'justice': {
+                    text: '⚖️ Code compiles into courage, algorithms align with ethics, and data structures support human dignity.',
+                    color: 'linear-gradient(45deg, #4ecdc4, #45b7d1)'
+                },
+                'fusion': {
+                    text: '🌟 Art and justice merge, creating a new reality where beauty serves purpose and creativity drives change.',
+                    color: 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #feca57, #45b7d1)'
+                }
+            };
+            
+            display.innerHTML = transformations[type].text;
+            display.style.background = transformations[type].color;
+            display.classList.add('pulse');
+            
+            setTimeout(() => {
+                display.classList.remove('pulse');
+            }, 2000);
+        }
+
+        // Auto-animate story cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.5 + 's';
+                    entry.target.classList.add('fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.story-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
